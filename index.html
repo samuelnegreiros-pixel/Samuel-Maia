@@ -1,71 +1,94 @@
-<!DOCTYPE html>
-<html lang="pt">
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 
-<head>
-    <meta charset="UTF-8">
+    font-family: Arial, Helvetica, sans-serif;
+}
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+body{
 
-    <title>Samuel Maia</title>
+    background: #0d0d0d;
 
-    <link rel="stylesheet" href="style.css">
-</head>
+    color: white;
 
-<body>
+    min-height: 100vh;
 
-    <div class="container">
+    display: flex;
 
-        <section class="hero">
+    justify-content: center;
 
-            <h1>Samuel Maia</h1>
+    align-items: center;
 
-            <span>N° 36</span>
+    padding: 20px;
+}
 
-            <p>
-                Desenvolvedor, criador e apaixonado por tecnologia.
-            </p>
+.container{
 
-            <div class="buttons">
+    width: 100%;
 
-                <a href="#trimestres" class="btn btn-primary">
-                    Entrar
-                </a>
+    max-width: 900px;
 
-                <a href="mailto:email@gmail.com" class="btn btn-secondary">
-                    Contato
-                </a>
+    background: #171717;
 
-            </div>
+    border-radius: 24px;
 
-        </section>
+    overflow: hidden;
 
-        <section id="trimestres" class="trimestres">
+    box-shadow: 0 0 40px rgba(0,0,0,0.5);
+}
 
-            <h2>Projetos Escolares</h2>
+/* HERO */
 
-            <div class="cards">
+.hero{
 
-                <a href="projeto1.html" class="card">
-                    1° Trimestre
-                </a>
+    padding: 80px 30px;
 
-                <a href="#" class="card">
-                    2° Trimestre
-                </a>
+    text-align: center;
 
-                <a href="#" class="card">
-                    3° Trimestre
-                </a>
+    background: linear-gradient(135deg,#1c1c1c,#252525);
+}
 
-            </div>
+.hero h1{
 
-        </section>
+    font-size: 52px;
 
-        <footer>
-            © 2026 Samuel Maia
-        </footer>
+    margin-bottom: 10px;
+}
 
-    </div>
+.hero span{
 
-</body>
-</html>
+    color: #8d8d8d;
+
+    font-size: 18px;
+}
+
+.hero p{
+
+    margin-top: 20px;
+
+    color: #bdbdbd;
+
+    line-height: 1.6;
+
+    font-size: 18px;
+}
+
+/* BOTÕES */
+
+.buttons{
+
+    margin-top: 35px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+.btn{
+
+    text-decoration: none;
