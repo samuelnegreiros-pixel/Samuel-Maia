@@ -1,445 +1,153 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Forest Green - Cultivamos o futuro com responsabilidade</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  
-  <style>
-    /* RESET & VARIÁVEIS */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    :root {
-      --bg-dark-green: #1d3c26;
-      --bg-light-beige: #f6f5ef;
-      --bg-card-beige: #edece4;
-      --text-dark: #1f2720;
-      --text-muted: #5e655b;
-      --primary-green: #2d5a39;
-      --font-serif: 'Playfair Display', serif;
-      --font-sans: 'Plus Jakarta Sans', sans-serif;
-    }
+:root {
+  --bg-dark: #1d3c26;
+  --bg-light: #f6f5ef;
+  --bg-card: #edece4;
+  --text-main: #1f2720;
+  --text-muted: #5e655b;
+  --accent: #a4d6aa;
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+}
 
-    body {
-      font-family: var(--font-sans);
-      background-color: var(--bg-light-beige);
-      color: var(--text-dark);
-      line-height: 1.6;
-    }
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-light);
+  color: var(--text-main);
+  line-height: 1.6;
+}
 
-    /* HEADER / NAVBAR */
-    .header {
-      background-color: var(--bg-dark-green);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 8%;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
+/* HEADER */
+.header {
+  background-color: var(--bg-dark);
+  padding: 20px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      color: #ffffff;
-      font-weight: 700;
-      font-size: 1.2rem;
-    }
+.logo {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
 
-    .nav {
-      display: flex;
-      align-items: center;
-      gap: 28px;
-    }
+.nav a {
+  color: #d1d8d2;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
 
-    .nav a {
-      color: #d1d8d2;
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
+.nav a:hover {
+  color: #ffffff;
+}
 
-    .nav a:hover {
-      color: #ffffff;
-    }
+/* HERO TRIMESTRE */
+.hero-tri {
+  background-color: var(--bg-dark);
+  color: #ffffff;
+  text-align: center;
+  padding: 50px 20px 70px;
+}
 
-    .nav .btn-nav {
-      background-color: #3b714b;
-      color: #ffffff;
-      padding: 8px 18px;
-      border-radius: 4px;
-      font-size: 0.85rem;
-    }
+.tag-tri {
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 16px;
+}
 
-    /* HERO SECTION */
-    .hero {
-      background-color: var(--bg-dark-green);
-      color: #ffffff;
-      text-align: center;
-      padding: 60px 20px 90px;
-    }
+.hero-tri h1 {
+  font-family: var(--font-serif);
+  font-size: 2.8rem;
+  margin-bottom: 12px;
+}
 
-    .badge-tag {
-      background-color: rgba(255, 255, 255, 0.12);
-      color: #a4d6aa;
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      padding: 6px 14px;
-      border-radius: 20px;
-      display: inline-block;
-      margin-bottom: 24px;
-    }
+.hero-tri p {
+  color: #c0cbbf;
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1rem;
+}
 
-    .hero h1 {
-      font-family: var(--font-serif);
-      font-size: 3.2rem;
-      font-weight: 600;
-      line-height: 1.2;
-      margin-bottom: 20px;
-    }
+/* GALERIA DE PROJETOS DO TRIMESTRE */
+.section-projetos {
+  padding: 60px 8%;
+}
 
-    .hero p {
-      color: #c0cbbf;
-      font-size: 1.05rem;
-      max-width: 650px;
-      margin: 0 auto 35px;
-    }
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
 
-    .btn-primary {
-      display: inline-block;
-      background-color: #3b714b;
-      color: #ffffff;
-      padding: 14px 28px;
-      border-radius: 4px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.9rem;
-    }
+.section-title h2 {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+}
 
-    /* GALLERY SECTION */
-    .gallery-section {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-      padding: 0 8%;
-      margin-top: -40px;
-    }
+.grid-projetos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
 
-    .card-gallery {
-      position: relative;
-      height: 280px;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-    }
+.card-projeto {
+  background-color: var(--bg-card);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
+}
 
-    .card-gallery img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+.card-projeto:hover {
+  transform: translateY(-5px);
+}
 
-    .card-overlay {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      padding: 20px;
-      background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
-      color: #ffffff;
-    }
+.card-projeto img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
 
-    .card-tag {
-      font-size: 0.65rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-      background: rgba(255, 255, 255, 0.2);
-      padding: 3px 8px;
-      border-radius: 3px;
-      display: inline-block;
-      margin-bottom: 6px;
-    }
+.card-content {
+  padding: 20px;
+}
 
-    .card-overlay h3 {
-      font-family: var(--font-serif);
-      font-size: 1.25rem;
-    }
+.card-content span {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+}
 
-    /* ABOUT SECTION */
-    .about-section {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
-      padding: 100px 8%;
-    }
+.card-content h3 {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  margin: 8px 0;
+}
 
-    .section-tag {
-      color: var(--text-muted);
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      display: block;
-      margin-bottom: 12px;
-    }
+.card-content p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
 
-    .about-content h2 {
-      font-family: var(--font-serif);
-      font-size: 2.6rem;
-      line-height: 1.2;
-      margin-bottom: 24px;
-    }
-
-    .about-content p {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      margin-bottom: 18px;
-    }
-
-    .about-image-wrapper {
-      position: relative;
-      height: 420px;
-    }
-
-    .about-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 12px;
-    }
-
-    .experience-badge {
-      position: absolute;
-      bottom: -20px;
-      left: -20px;
-      background-color: var(--bg-dark-green);
-      color: #ffffff;
-      padding: 20px;
-      border-radius: 8px;
-      max-width: 180px;
-    }
-
-    .experience-badge h3 {
-      font-family: var(--font-serif);
-      font-size: 2rem;
-      color: #a4d6aa;
-    }
-
-    .experience-badge p {
-      font-size: 0.75rem;
-      color: #d1d8d2;
-    }
-
-    /* STATS BAR */
-    .stats-bar {
-      background-color: var(--bg-dark-green);
-      color: #ffffff;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      padding: 50px 8%;
-      text-align: center;
-    }
-
-    .stat-item h2 {
-      font-family: var(--font-serif);
-      font-size: 3rem;
-      color: #a4d6aa;
-    }
-
-    .stat-item p {
-      font-size: 0.85rem;
-      color: #d1d8d2;
-    }
-
-    /* SERVICES SECTION */
-    .services-section {
-      padding: 100px 8%;
-      text-align: center;
-    }
-
-    .services-header h2 {
-      font-family: var(--font-serif);
-      font-size: 2.5rem;
-      margin-bottom: 50px;
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-    }
-
-    .service-card {
-      background-color: var(--bg-card-beige);
-      padding: 35px 20px;
-      border-radius: 12px;
-      text-align: left;
-    }
-
-    .service-icon {
-      font-size: 1.8rem;
-      margin-bottom: 16px;
-      background: #e2e1d7;
-      width: 48px;
-      height: 48px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 8px;
-    }
-
-    .service-card h3 {
-      font-family: var(--font-serif);
-      font-size: 1.2rem;
-      margin-bottom: 12px;
-    }
-
-    .service-card p {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-    }
-
-    /* RESPONSIVO */
-    @media (max-width: 900px) {
-      .gallery-section, .about-section, .stats-bar, .services-grid {
-        grid-template-columns: 1fr;
-      }
-      .hero h1 { font-size: 2.2rem; }
-    }
-  </style>
-</head>
-<body>
-
-  <!-- HEADER / NAVBAR -->
-  <header class="header">
-    <div class="logo">
-      <span>🍃</span>
-      <span>Forest Green</span>
-    </div>
-    <nav class="nav">
-      <a href="#inicio">Início</a>
-      <a href="#sobre">Sobre</a>
-      <a href="#servicos">Serviços</a>
-      <a href="#impacto">Impacto</a>
-      <a href="#fale" class="btn-nav">Fale Conosco</a>
-    </nav>
-  </header>
-
-  <!-- HERO SECTION -->
-  <section class="hero" id="inicio">
-    <span class="badge-tag">AGRONEGÓCIO VERDE</span>
-    <h1>Cultivamos o futuro com<br />responsabilidade</h1>
-    <p>Da lavoura à colheita, praticamos um agronegócio que respeita a terra, protege a vida e cuida das próximas gerações.</p>
-    <a href="#trabalho" class="btn-primary">Conheça nosso trabalho &rarr;</a>
-  </section>
-
-  <!-- GALLERY SECTION -->
-  <section class="gallery-section" id="trabalho">
-    <div class="card-gallery">
-      <img src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?auto=format&fit=crop&w=800&q=80" alt="Agricultura" />
-      <div class="card-overlay">
-        <span class="card-tag">AGRONEGÓCIO</span>
-        <h3>Agricultura do Futuro</h3>
-      </div>
-    </div>
-    <div class="card-gallery">
-      <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=800&q=80" alt="Floresta" />
-      <div class="card-overlay">
-        <span class="card-tag">MEIO AMBIENTE</span>
-        <h3>Preservação Florestal</h3>
-      </div>
-    </div>
-    <div class="card-gallery">
-      <img src="https://images.unsplash.com/photo-1595974482597-4b8da8879bc5?auto=format&fit=crop&w=800&q=80" alt="Colheita" />
-      <div class="card-overlay">
-        <span class="card-tag">PRODUÇÃO</span>
-        <h3>Colheita Orgânica</h3>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT SECTION -->
-  <section class="about-section" id="sobre">
-    <div class="about-content">
-      <span class="section-tag">QUEM SOMOS</span>
-      <h2>Agronegócio que respeita a floresta</h2>
-      <p>A Forest Green nasceu da convicção de que é possível produzir com eficiência sem abrir mão da responsabilidade ambiental.</p>
-      <p>Com mais de três décadas de experiência, somos referência em práticas de baixo carbono e sustentabilidade no campo.</p>
-    </div>
-
-    <div class="about-image-wrapper">
-      <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=800&q=80" alt="Agricultor" class="about-img" />
-      <div class="experience-badge">
-        <h3>38+</h3>
-        <p>Anos de experiência em agronegócio verde</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- STATS BAR -->
-  <section class="stats-bar" id="impacto">
-    <div class="stat-item">
-      <h2>120K</h2>
-      <p>Hectares Manejados</p>
-    </div>
-    <div class="stat-item">
-      <h2>38+</h2>
-      <p>Anos de Experiência</p>
-    </div>
-    <div class="stat-item">
-      <h2>850</h2>
-      <p>Produtores Parceiros</p>
-    </div>
-    <div class="stat-item">
-      <h2>94%</h2>
-      <p>Redução de Emissões</p>
-    </div>
-  </section>
-
-  <!-- SERVICES SECTION -->
-  <section class="services-section" id="servicos">
-    <div class="services-header">
-      <span class="section-tag">O QUE OFERECEMOS</span>
-      <h2>Soluções para um campo mais verde</h2>
-    </div>
-
-    <div class="services-grid">
-      <div class="service-card">
-        <div class="service-icon">🌱</div>
-        <h3>Agricultura Regenerativa</h3>
-        <p>Práticas que restauram a saúde do solo e aumentam a biodiversidade.</p>
-      </div>
-
-      <div class="service-card">
-        <div class="service-icon">🌳</div>
-        <h3>Reflorestamento</h3>
-        <p>Programas de plantio de espécies nativas para recuperação de reservas.</p>
-      </div>
-
-      <div class="service-card">
-        <div class="service-icon">📊</div>
-        <h3>Rastreabilidade Verde</h3>
-        <p>Tecnologia para monitorar a origem e conformidade dos produtos.</p>
-      </div>
-
-      <div class="service-card">
-        <div class="service-icon">📈</div>
-        <h3>Créditos de Carbono</h3>
-        <p>Consultoria e gestão ESG para o mercado global de carbono.</p>
-      </div>
-    </div>
-  </section>
-
-</body>
-</html>
+@media (max-width: 800px) {
+  .grid-projetos {
+    grid-template-columns: 1fr;
+  }
+}
